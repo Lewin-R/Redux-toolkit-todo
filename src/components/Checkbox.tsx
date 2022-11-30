@@ -1,4 +1,4 @@
-import { FC, useCallback, useId, useState } from "react";
+import { FC, useCallback, useId } from "react";
 
 export interface CheckboxProps {
   isChecked?: boolean;
@@ -10,14 +10,10 @@ export const Checkbox: FC<CheckboxProps> = ({
   onChange = () => {},
 }) => {
   const checkboxId = useId();
-  const [isCheckedState, setIsCheckedState] = useState(isChecked);
 
   const handleChange = useCallback(() => {
-    setIsCheckedState((prevState) => {
-      onChange(!prevState);
-      return !prevState;
-    });
-  }, [onChange]);
+    onChange(!isChecked);
+  }, [isChecked, onChange]);
 
   return (
     <div className="form-check">
@@ -25,7 +21,7 @@ export const Checkbox: FC<CheckboxProps> = ({
         className="form-check-input"
         type="checkbox"
         id={checkboxId}
-        checked={isCheckedState}
+        checked={isChecked}
         onChange={handleChange}
       />
       <label className="form-check-label" htmlFor={checkboxId}>

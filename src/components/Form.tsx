@@ -23,18 +23,20 @@ export const Form: FC = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="card-body">
-        <label htmlFor="<<TODO>>">Title</label>
+        <label htmlFor={id + "__title"}>Title</label>
         <div className="input-group mb-3">
           <input
+            id={id + "__title"}
             className="form-control"
             type="text"
             placeholder="Enter a title ..."
             onChange={(event) => setTitle(event.target.value)}
           />
         </div>
-        <label htmlFor="<<TODO>>">Priority</label>
+        <label htmlFor={id + "__priority"}>Priority</label>
         <div className="input-group mb-3">
           <input
+            id={id + "__priority"}
             className="form-control"
             type="number"
             min="1"
