@@ -9,7 +9,6 @@ export const Form: FC = () => {
   const id = useId();
   const dispatch = useAppDispatch();
 
-  //Dispatch an action
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     dispatch(

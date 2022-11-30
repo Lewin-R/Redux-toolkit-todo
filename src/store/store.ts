@@ -6,7 +6,6 @@ import {
 } from 'react-redux';
 import { rootReducer } from './reducer';
 
-/*configure the store here*/
 export const store = configureStore({
   reducer: rootReducer,
 });

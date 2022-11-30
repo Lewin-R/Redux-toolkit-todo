@@ -1,12 +1,10 @@
 import { FC } from "react";
 import { Todo } from "./Todo";
-import { mockDataTodos } from "../mock-data";
 import { TodoModel } from "../TodoModel";
 import { useAppSelector } from "../store/store";
 import { selectAllTodos } from "../store/states/todos.selectors";
 
 export const Todos: FC = () => {
-  //const todos: TodoModel[] = mockDataTodos; // TODO: Use selector here
   const todos: TodoModel[] = useAppSelector(selectAllTodos);
 
   return (

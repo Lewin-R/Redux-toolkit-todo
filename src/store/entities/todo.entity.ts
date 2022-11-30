@@ -13,7 +13,6 @@ const todoSlice = createSlice({
   name: ENTITY_KEY,
   initialState,
   reducers: {
-    /*add reducers that fit*/
     addOneTodo: todoAdapter.addOne,
     removeOneTodo: todoAdapter.removeOne,
     updateOneTodo: todoAdapter.updateOne,
@@ -22,7 +21,6 @@ const todoSlice = createSlice({
 
 export const { reducer, actions } = todoSlice;
 
-/*finally, add your actions, you defined, here! */
 export const { addOneTodo, removeOneTodo, updateOneTodo } = actions;
 
 export const selectors = todoAdapter.getSelectors();

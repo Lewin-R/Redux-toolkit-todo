@@ -1,13 +1,5 @@
 import { FC, useCallback, useId, useState } from "react";
 
-/**
- * --
- * THIS COMPONENT IS ALREADY READY TO USE
- *
- * You don't need to do anything in here :)
- * --
- */
-
 export interface CheckboxProps {
   isChecked?: boolean;
   onChange?: (value: boolean) => void;

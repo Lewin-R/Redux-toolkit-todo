@@ -19,7 +19,6 @@ export const Todo: FC<TodoProps> = ({
   priority,
   isDone,
 }) => {
-  //Dispatch an action
   const dispatch = useAppDispatch();
 
   const handleChange = () => {

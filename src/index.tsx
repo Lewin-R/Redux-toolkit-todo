@@ -9,7 +9,6 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    {/*add the provider here*/}
     <Provider store={store}>
       <App />
     </Provider>
