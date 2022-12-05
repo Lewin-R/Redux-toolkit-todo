@@ -4,6 +4,6 @@ import { RootState } from '../store';
 
 const stateSelector = (state: RootState) => state.todo;
 
-export const selectAllTodos = createSelector(stateSelector, (applications) =>
-  selectors.selectAll(applications)
+export const selectAllTodos = createSelector(stateSelector, (todos) =>
+  selectors.selectAll(todos)
 );
